@@ -15,7 +15,7 @@ const fetchActivity = async (username) => {
 
     try{
         const response = await axios.get(`${BASE_URL}/users/${username}/events`,{
-            header:{
+            headers:{
                 Authorization :`token ${process.env.GITHUB_TOKEN}`,
                 Accept : "application/vnd.github+json",
             },
